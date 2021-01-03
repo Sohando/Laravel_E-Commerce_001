@@ -45,5 +45,7 @@ Project -> config -> ide_helper.php
 <hr>
    
 ###Section 2:
-#####Project Structure
+#####Workflow
+    1. App Configuration
+    2. Database Design 
 
