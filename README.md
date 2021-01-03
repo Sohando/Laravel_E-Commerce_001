@@ -54,4 +54,5 @@ Project -> config -> ide_helper.php
 #####Workflow
     1. App Configuration
     2. Database Design 
+    3. Models
 

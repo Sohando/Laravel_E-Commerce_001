@@ -18,8 +18,10 @@ class CreateCategoriesTable extends Migration
             $table->string('name', 128);
             $table->string('slug', 128);
             $table->string('banner', 128);
-            $table->tinyInteger('parent_id')->default(0);
+            $table->unsignedBigInteger('parent_id');
             $table->timestamps();
+
+            $table->foreign('parent_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
