@@ -9,12 +9,12 @@ class \Category extends Model
     protected $guarded = [];
 
     public function parent_category() {
-        $this->belongsTo(__CLASS__);
+        return $this->belongsTo(__CLASS__);
     }
     public function child_category() {
-        $this->hasMany(__CLASS__);
+        return $this->hasMany(__CLASS__);
     }
     public function products() {
-        $this->hasMany(Product::class);
+        return $this->hasMany(Product::class);
     }
 }

@@ -13,7 +13,7 @@ class \Product extends Model implements HasMedia
     protected $fillable = [];
 
     public function category() {
-        $this->hasOne(Category::class);
+        return $this->hasOne(Category::class);
     }
     protected static function boot() {
         Parent::boot();
