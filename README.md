@@ -26,7 +26,13 @@
             <td> composer require --dev barryvdh/laravel-ide-helper</td>
             <td>php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config</td>     
             <td>php artisan ide-helper:generate</td>
-        </tr>       
+        </tr>     
+        <tr>
+            <td> Laravel Media Library (images)</td>
+            <td>composer require "spatie/laravel-medialibrary"</td>
+            <td>php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="migrations"</td>
+            <td>php artisan migrate</td>
+        </tr>  
     </tbody>
  </table>
  
