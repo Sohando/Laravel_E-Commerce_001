@@ -1,16 +1,17 @@
 <?php
 
-namespace App\\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+use Str;
+class Product extends Model implements HasMedia
 
-class \Product extends Model implements HasMedia
 {
-    use InteractsWithMedia;
+    use HasMediaTrait;
 
-    protected $fillable = [];
+    protected $guarded = [];
 
     public function category() {
         return $this->hasOne(Category::class);
@@ -18,7 +19,7 @@ class \Product extends Model implements HasMedia
     protected static function boot() {
         Parent::boot();
         static::creating(function ($product) {
-            $product->slug = str_slug($product->title);
+            $product->slug = Str::slug($product->title);
         });
     }
 }

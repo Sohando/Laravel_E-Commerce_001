@@ -55,4 +55,16 @@ Project -> config -> ide_helper.php
     1. App Configuration
     2. Database Design 
     3. Models
+    4. Seeder
+
+```text
+Write our seeder function():
+    1. Factory
+        => UserFactory [ php artisan make:factory UserFactory ]
+        => edit user factory according your need
+    2. Seeder
+        => UserTableSeeder [ php artisan make:seeder UserTableSeeder ] 
+        => factory(App\Models\User::class, 10)->create()
+    3. Run php artisan db:seed 
+```
 

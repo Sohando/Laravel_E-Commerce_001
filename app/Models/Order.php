@@ -1,10 +1,10 @@
 <?php
 
-namespace App\\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class \Order extends Model
+class Order extends Model
 {
     protected $guard = [];
     public function customer() {
