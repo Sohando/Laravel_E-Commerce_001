@@ -56,6 +56,7 @@ Project -> config -> ide_helper.php
     2. Database Design 
     3. Models
     4. Seeder
+    5. Frontend laravel mix
 
 ```text
 Write our seeder function():
